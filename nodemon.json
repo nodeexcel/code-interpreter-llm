@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ignore": [
+    "src/generated/**/*"
+  ],
+  "ext": "ts",
+  "exec": "npm run generate && npx tsx src/index.ts"
+}
