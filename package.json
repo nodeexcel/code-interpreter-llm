@@ -1,0 +1,45 @@
+{
+  "name": "@e2b/chatgpt-plugin",
+  "version": "0.1.0",
+  "description": "e2b ChatGPT Plugin",
+  "homepage": "https://e2b.dev",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "FoundryLabs, Inc.",
+    "email": "hello@e2b.dev",
+    "url": "https://e2b.dev"
+  },
+  "bugs": "https://github.com/e2b-dev/chatgpt-plugin/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e2b-dev/chatgpt-plugin/tree/main"
+  },
+  "dependencies": {
+    "@devbookhq/sdk": "^2.6.82",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
+    "tsoa": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^20.4.5",
+    "esbuild": "^0.18.17",
+    "js-yaml": "^4.1.0",
+    "nodemon": "^3.0.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "npm run generate && tsc --noEmit && node ./scripts/build.js",
+    "start": "node lib/index.js",
+    "generate": "tsoa spec-and-routes && node ./scripts/formatSpec.js", 
+    "docker:build": "docker build -t e2b/chatgpt-plugin-api .",
+    "docker:start": "docker run --init -p 3000:3000 e2b/chatgpt-plugin-api"
+  }
+}

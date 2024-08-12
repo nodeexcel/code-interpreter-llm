@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "E2B code interpreter",
+  "name_for_model": "e2bcodeintepreter",
+  "description_for_human": "Sandboxed cloud environment where you can run any process, use filesystem and access the internet",
+  "description_for_model": "Plugin for writing and reading files and running processes with access to the internet in a cloud environment.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:3000/openapi.yaml"
+  },
+  "logo_url": "https://raw.githubusercontent.com/e2b-dev/chatgpt-plugin/main/logo.png",
+  "contact_email": "hello@e2b.dev",
+  "legal_info_url": "http://example.com/legal"
+}

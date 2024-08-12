@@ -1,0 +1,27 @@
+{
+  "entryFile": "src/index.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": [
+    "src/plugin/*Controller.ts"
+  ],
+  "ignore": [
+    "src/generated"
+  ],
+  "spec": {
+    "outputDirectory": "./",
+    "specVersion": 3,
+    "spec": {
+    "servers": [
+        {
+          "url": "http://localhost:3000",
+          "description": "Local development"
+        }
+      ]
+    },
+    "yaml": true,
+    "specFileBaseName": "openapi"
+  },
+  "routes": {
+    "routesDir": "src/generated"
+  }
+}
